@@ -1,4 +1,4 @@
-# bal-pario-marty-ui
+# bal-pario-marty
 
 This template should help get you started developing with Vue 3 in Vite.
 
