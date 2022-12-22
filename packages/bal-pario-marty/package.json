@@ -2,13 +2,14 @@
   "name": "bal-pario-marty",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview --port 4173",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
     "buefy": "^0.9.22",
+    "colyseus.js": "^0.14.13",
     "pinia": "^2.0.16",
     "vue": "^2.7.7",
     "vue-router": "^3.5.4"
