@@ -22,12 +22,20 @@ const router = new VueRouter({
       component: () => import("../views/AboutView.vue"),
     },
     {
-      path: "/busy-button",
+      path: "/pushups",
       name: "busy-button",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/BusyButton.vue"),
+    },
+    {
+      path: "/reaction-time",
+      name: "reaction-time",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/ReactionTime.vue"),
     },
   ],
 });

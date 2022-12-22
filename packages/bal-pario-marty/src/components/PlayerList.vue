@@ -19,7 +19,9 @@
                 </div>
               </div>
               <div class="card-content">
-                <div class="title is-1">{{ player.score }}</div>
+                <div class="title" :class="isReaction ? 'is-3' : 'is-1'">
+                  {{ isReaction ? `${player.score / 1000}S` : player.score }}
+                </div>
               </div>
             </div>
           </div>
@@ -32,6 +34,11 @@
 export default {
   props: {
     clients: { type: Object, required: true },
+    isReaction: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
   },
   computed: {
     players() {
@@ -43,6 +50,7 @@ export default {
       });
 
       return Object.values(mappedPlayers).sort((a, b) => {
+        if (this.isReaction) return a.score - b.score;
         return b.score - a.score;
       });
     },

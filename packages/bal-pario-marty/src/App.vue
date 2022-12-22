@@ -19,6 +19,10 @@ import HelloWorld from "./components/HelloWorld.vue";
       </template>
     </b-navbar>
 
+    <router-link v-if="$route.name !== 'home'" to="/" class="is-inline-flex">
+      <b-icon icon="arrow-left" class="is-inline-block mx-4"></b-icon>
+      <span class="is-inline-block mt-2">Alle Spiele</span>
+    </router-link>
     <router-view />
   </div>
 </template>

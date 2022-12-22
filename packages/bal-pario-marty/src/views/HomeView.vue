@@ -12,10 +12,18 @@ export default {
 </script>
 
 <template>
-  <div class="hero is-dark is-fullheight">
+  <div class="hero">
     <div class="hero-body">
+      <div class="title is-1 has-text-white">Home</div>
       <div>
-        <div class="title is-1-has-text-white">Home</div>
+        <router-link class="button is-primary" to="/pushups"
+          >Liegestützen</router-link
+        >
+      </div>
+      <div class="mt-4">
+        <router-link class="button is-primary" to="/reaction-time"
+          >Reaktionszeit</router-link
+        >
       </div>
     </div>
   </div>
